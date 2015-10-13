@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize movingLabel, motionManager;
+@synthesize motionManager, movingButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,9 +35,9 @@
 
 -(void)outputAccelertionData:(CMAcceleration)acceleration
 {
-    CGRect newButtonPressLocation = movingLabel.frame;
-    newButtonPressLocation.origin.y -= (50 * acceleration.y);
-    newButtonPressLocation.origin.x += (50 * acceleration.x);
+    CGRect newButtonPressLocation = movingButton.frame;
+    newButtonPressLocation.origin.y -= (5 * acceleration.y);
+    newButtonPressLocation.origin.x += (5 * acceleration.x);
     if (newButtonPressLocation.origin.y < 0)
         newButtonPressLocation.origin.y = 1056;
     if (newButtonPressLocation.origin.y > 1056)
@@ -49,10 +49,7 @@
         newButtonPressLocation.origin.x = 800;
     if (newButtonPressLocation.origin.x > 800)
         newButtonPressLocation.origin.x = 0;
-    [UIView animateKeyframesWithDuration:0 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{movingLabel.frame = newButtonPressLocation;} completion:nil];
-    //[UIView animateWithDuration:0.5 animations:^{
-    //    movingLabel.frame = newButtonPressLocation;
-    //}];
+    [UIView animateKeyframesWithDuration:0 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{movingButton.frame = newButtonPressLocation;} completion:nil];
     
 }
 

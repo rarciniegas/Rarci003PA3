@@ -11,7 +11,7 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *movingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *movingButton;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
