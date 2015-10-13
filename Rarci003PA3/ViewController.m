@@ -26,8 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.motionManager = [[CMMotionManager alloc] init];
-    self.motionManager.accelerometerUpdateInterval = .2;
-    self.motionManager.gyroUpdateInterval = .2;
+    self.motionManager.accelerometerUpdateInterval = .01;
     
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
                                              withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
@@ -44,19 +43,20 @@
     CGRect newButtonPressLocation = movingButton.frame;
     newButtonPressLocation.origin.y -= (5 * acceleration.y);
     newButtonPressLocation.origin.x += (5 * acceleration.x);
+    
     if (newButtonPressLocation.origin.y < 0)
-        newButtonPressLocation.origin.y = 1056;
-    if (newButtonPressLocation.origin.y > 1056)
+        newButtonPressLocation.origin.y = 1024;
+    if (newButtonPressLocation.origin.y > 1024)
         newButtonPressLocation.origin.y = 0;
     
-    
-    
     if (newButtonPressLocation.origin.x < 0)
-        newButtonPressLocation.origin.x = 800;
-    if (newButtonPressLocation.origin.x > 800)
+        newButtonPressLocation.origin.x = 768;
+    if (newButtonPressLocation.origin.x > 768)
         newButtonPressLocation.origin.x = 0;
-    [UIView animateKeyframesWithDuration:0 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{movingButton.frame = newButtonPressLocation;} completion:nil];
     
+    [UIView animateWithDuration:0 animations:^{
+        movingButton.frame = newButtonPressLocation;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
