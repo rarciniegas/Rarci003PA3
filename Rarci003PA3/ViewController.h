@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *movingLabel;
+
+@property (strong, nonatomic) CMMotionManager *motionManager;
+
+-(void)outputAccelertionData:(CMAcceleration)acceleration;
+
 
 
 @end

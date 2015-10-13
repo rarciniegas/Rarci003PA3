@@ -14,6 +14,7 @@
 		8EF423F81BCD5DDD000A8714 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF423F71BCD5DDD000A8714 /* Images.xcassets */; };
 		8EF423FB1BCD5DDD000A8714 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF423F91BCD5DDD000A8714 /* LaunchScreen.xib */; };
 		8EF424071BCD5DDD000A8714 /* Rarci003PA3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF424061BCD5DDD000A8714 /* Rarci003PA3Tests.m */; };
+		8EF424111BCD5DF2000A8714 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF424101BCD5DF2000A8714 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8EF424001BCD5DDD000A8714 /* Rarci003PA3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rarci003PA3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF424051BCD5DDD000A8714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EF424061BCD5DDD000A8714 /* Rarci003PA3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rarci003PA3Tests.m; sourceTree = "<group>"; };
+		8EF424101BCD5DF2000A8714 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF424111BCD5DF2000A8714 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		8EF423DE1BCD5DDD000A8714 = {
 			isa = PBXGroup;
 			children = (
+				8EF424101BCD5DF2000A8714 /* CoreMotion.framework */,
 				8EF423E91BCD5DDD000A8714 /* Rarci003PA3 */,
 				8EF424031BCD5DDD000A8714 /* Rarci003PA3Tests */,
 				8EF423E81BCD5DDD000A8714 /* Products */,
