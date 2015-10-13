@@ -1,3 +1,9 @@
+//  PROGRAMMER: Roberto Arciniegas
+//  PANTHERID: 1385020
+//  CLASS:          COP 465501 TR 5:00
+//  INSTRUCTOR:     Steve Luis  ECS 282
+//  ASSIGNMENT:     Participation Assignment #3
+//  DUE:            Tuesday 10/13/15
 //
 //  AppDelegate.h
 //  Rarci003PA3
